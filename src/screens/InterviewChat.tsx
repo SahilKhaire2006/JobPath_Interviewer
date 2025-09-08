@@ -330,12 +330,12 @@ export const InterviewChat: React.FC = () => {
       // Add speaker name
       doc.setFontSize(10);
       doc.setTextColor(0, 0, 0);
-      doc.setFont(undefined, 'bold');
+      doc.setFont('helvetica', 'bold');
       doc.text(`${speaker}:`, 20, yPosition);
       yPosition += 5;
       
       // Add message content
-      doc.setFont(undefined, 'normal');
+      doc.setFont('helvetica', 'normal');
       const messageLines = doc.splitTextToSize(message.message, 170);
       
       if (yPosition + (messageLines.length * 4) > pageHeight - 20) {
@@ -353,7 +353,7 @@ export const InterviewChat: React.FC = () => {
       yPosition = 20;
       
       doc.setFontSize(14);
-      doc.setFont(undefined, 'bold');
+      doc.setFont('helvetica', 'bold');
       doc.text('Interview Evaluation', 20, yPosition);
       yPosition += 15;
       
@@ -363,7 +363,7 @@ export const InterviewChat: React.FC = () => {
       yPosition += 10;
       
       doc.setFontSize(10);
-      doc.setFont(undefined, 'normal');
+      doc.setFont('helvetica', 'normal');
       doc.text(`Technical Knowledge: ${evaluationMetrics.technicalKnowledge.toFixed(1)}%`, 20, yPosition);
       yPosition += 7;
       doc.text(`Communication Skills: ${evaluationMetrics.communicationSkills.toFixed(1)}%`, 20, yPosition);
@@ -372,14 +372,14 @@ export const InterviewChat: React.FC = () => {
       yPosition += 7;
       doc.text(`Problem Solving: ${evaluationMetrics.problemSolving.toFixed(1)}%`, 20, yPosition);
       yPosition += 7;
-      doc.setFont(undefined, 'bold');
+      doc.setFont('helvetica', 'bold');
       doc.text(`Overall Score: ${evaluationMetrics.overallScore.toFixed(1)}%`, 20, yPosition);
       yPosition += 15;
       
-      doc.setFont(undefined, 'bold');
+      doc.setFont('helvetica', 'bold');
       doc.text('Feedback:', 20, yPosition);
       yPosition += 7;
-      doc.setFont(undefined, 'normal');
+      doc.setFont('helvetica', 'normal');
       evaluationMetrics.feedback.forEach(feedback => {
         doc.text(`• ${feedback}`, 25, yPosition);
         yPosition += 7;
