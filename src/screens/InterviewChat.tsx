@@ -124,7 +124,7 @@ export const InterviewChat: React.FC = () => {
           console.error("Failed to create conversation:", error);
           
           if (error.message === "CREDITS_EXHAUSTED") {
-            setConnectionError("Your account is out of conversational credits. Please top up your Tavus account at https://platform.tavus.io/ to continue.");
+            setConnectionError("Your account is out of conversational credits.");
             setErrorType("credits_exhausted");
           } else {
             const errorMessage = error.message || "Unknown error occurred";
